@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+
+.login-btn {
+  height: 40px;
+  min-width: 120px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 139, 0.1);
+  color: darkblue;
+  border: 0;
+}
+
+.login-btn:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 139, 0.25);
+}
+
+.login-btn:active {
+  background-color: rgba(0, 0, 139, 0.35);
+}

@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, createTheme } from "@mui/material";
+import { useAuth } from "contexts/AuthContext";
+
+import CustomersPage from "pages/customers";
+import LoginPage from "pages/login";
 
 function App() {
+  const defaultMaterialTheme = createTheme();
+
+  const cntx = useAuth();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ width: "100%", height: "100%" }}>
+      <ThemeProvider theme={defaultMaterialTheme}>
+        {!cntx?.currentUser && <LoginPage onLogin={cntx?.login} />}
+        <CustomersPage currentUser={cntx?.currentUser} />
+      </ThemeProvider>
     </div>
   );
 }

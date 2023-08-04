@@ -1,0 +1,35 @@
+.actions {
+  display: flex;
+  padding: 2rem;
+  justify-content: flex-end;
+}
+
+.actionsBtn {
+  height: 40px;
+  border-radius: 4px;
+  background: transparent;
+  padding: 0.75rem;
+}
+
+.actionsBtn:hover {
+  cursor: pointer;
+}
+
+.actionsBtn.save:hover {
+  background-color: rgba(0, 128, 0, 0.05);
+}
+
+.actionsBtn.reload:hover {
+  background-color: rgba(255, 69, 0, 0.05);
+}
+
+.actionsBtn.save {
+  margin-right: 1rem;
+  border: 1px solid green;
+  color: green;
+}
+
+.actionsBtn.reload {
+  border: 1px solid orangered;
+  color: orangered;
+}
